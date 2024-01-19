@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.agribyte.myapplication.ItemDetails;
+import com.agribyte.myapplication.PlaceDetailsActivity;
 import com.agribyte.myapplication.R;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -74,11 +75,11 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
 
 
                 // Retrieve the tag value
-//                String tagValue = (String) marker.getTag();
-//                Toast.makeText (getActivity (), tagValue, Toast.LENGTH_SHORT ).show ();
-//                Intent intent = new Intent(getActivity(), PlaceDetailsActivity.class);
-//                intent.putExtra("markerTag", tagValue);
-//                startActivity(intent);
+                String tagValue = (String) marker.getTag();
+                Toast.makeText (getActivity (), tagValue, Toast.LENGTH_SHORT ).show ();
+                Intent intent = new Intent(getActivity(), PlaceDetailsActivity.class);
+                intent.putExtra("markerTag", tagValue);
+                startActivity(intent);
             }
         } );
         getdata ( "Locationdetails" );

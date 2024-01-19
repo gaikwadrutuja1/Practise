@@ -12,12 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
-
-
+        <activity
+            android:name=".PlaceDetailsActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCCjJIpcdl9W8_z7VtekULNIu5yvAaNG4w" />
+
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -26,31 +28,32 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-<!--        <activity-->
-<!--            android:name=".MainActivity"-->
-<!--            android:exported="true" />-->
-<!--        <activity-->
-<!--            android:name=".LoginActivity"-->
-<!--            android:exported="true" />-->
-<!--        <activity-->
-<!--            android:name=".SignupActivity"-->
-<!--            android:exported="true" />-->
-<!--        <activity android:name=".BottombarActivity"-->
-<!--            android:exported="true"/>-->
-
-        <activity android:name=".MainActivity"
-            android:exported="true"></activity>
-        <activity android:name=".LoginActivity"
-            android:exported="true"></activity>
-        <activity android:name=".SignupActivity"
-            android:exported="true"></activity>
-        <activity android:name=".AddItem"
-            android:exported="true"
-            ></activity>
-        <activity android:name=".BottombarActivity"
-            android:exported="true"
-            ></activity>
+        </activity> <!-- <activity -->
+        <!-- android:name=".MainActivity" -->
+        <!-- android:exported="true" /> -->
+        <!-- <activity -->
+        <!-- android:name=".LoginActivity" -->
+        <!-- android:exported="true" /> -->
+        <!-- <activity -->
+        <!-- android:name=".SignupActivity" -->
+        <!-- android:exported="true" /> -->
+        <!-- <activity android:name=".BottombarActivity" -->
+        <!-- android:exported="true"/> -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AddItem"
+            android:exported="true" />
+        <activity
+            android:name=".BottombarActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
