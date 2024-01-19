@@ -22,15 +22,15 @@ public class SplashActivity extends AppCompatActivity {
 
                 FirebaseAuth autho=FirebaseAuth.getInstance();
                FirebaseUser user= autho.getCurrentUser();
-//               if(user!=null){
-//                   Intent i = new Intent(getApplicationContext(), BottombarActivity.class) ;
-//                   startActivity(i);
-//                   SplashActivity.this.finish();
-//               }else{
+               if(user!=null){
+                   Intent i = new Intent(getApplicationContext(), BottombarActivity.class) ;
+                   startActivity(i);
+                   SplashActivity.this.finish();
+               }else{
                    Intent i = new Intent(getApplicationContext(), LoginActivity.class) ;
                    startActivity(i);
                    SplashActivity.this.finish();
-//               }
+               }
 
             }
         },5000);
