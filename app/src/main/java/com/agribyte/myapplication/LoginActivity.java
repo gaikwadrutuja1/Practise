@@ -42,8 +42,8 @@ public class LoginActivity extends AppCompatActivity {
 createnewaccount.setOnClickListener( new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-//        Intent i=new Intent(LoginActivity.this,SignupActivity.class);
-//        startActivity( i );
+        Intent i=new Intent(LoginActivity.this,SignupActivity.class);
+        startActivity( i );
 
     }
 } );
@@ -59,9 +59,9 @@ createnewaccount.setOnClickListener( new View.OnClickListener() {
                             String uid = mAuth.getCurrentUser().getUid();
                             Toast.makeText(LoginActivity.this, "Login Successfully ."+uid,
                                     Toast.LENGTH_SHORT).show();
-//                            Intent i=new Intent(LoginActivity.this,BottombarActivity.class);
-//                            startActivity( i );
-//                            finish();
+                            Intent i=new Intent(LoginActivity.this,BottombarActivity.class);
+                            startActivity( i );
+                            finish();
 // Do something with the user
                         } else {
 // If sign in fails, display a message to the user.

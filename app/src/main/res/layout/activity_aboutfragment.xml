@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/buttonbackground"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/ContactUs"
+
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:textSize="@android:dimen/app_icon_size"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:text="ContactUs" />
+    <TextView
+        android:id="@+id/highlight"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/ContactUs"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:text="Feel free to contact us anytime." />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_below="@+id/highlight"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100dp"
+        android:elevation="10dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="about.json">
+
+    </com.airbnb.lottie.LottieAnimationView>
+
+
+
+    <EditText
+        android:id="@+id/fullname"
+        android:layout_width="match_parent"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/lottie"
+        android:layout_height="45dp"
+        android:background="@drawable/roundded_button"
+        android:drawablePadding="05dp"
+        android:hint="FullName"
+
+        android:inputType="text"
+        android:paddingLeft="8dp"
+        android:paddingRight="36dp"
+        android:textColor="@color/tikdark"
+        android:textColorHint="@color/tiklightgray"
+
+
+
+        android:textSize="16dp"
+
+        />
+    <EditText
+        android:id="@+id/EmailAddress"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/fullname"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/roundded_button"
+        android:drawablePadding="05dp"
+        android:hint="email"
+
+        android:inputType="text"
+        android:paddingLeft="8dp"
+        android:paddingRight="36dp"
+        android:textColor="@color/tikdark"
+        android:textColorHint="@color/tiklightgray"
+
+        android:textCursorDrawable="@null"
+
+        android:textSize="16dp" />
+    <EditText
+        android:id="@+id/querry"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/EmailAddress"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/roundded_button"
+        android:drawablePadding="05dp"
+        android:hint="Querry"
+
+        android:inputType="text"
+        android:paddingLeft="8dp"
+        android:paddingRight="36dp"
+        android:textColor="@color/tikdark"
+        android:textColorHint="@color/tiklightgray"
+
+        android:textCursorDrawable="@null"
+
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/submitbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/querry"
+        android:background="@drawable/signupshape"
+        android:text="Submit"
+
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+
+        android:textStyle="normal" />
+
+
+
+
+
+</RelativeLayout>
+
+
