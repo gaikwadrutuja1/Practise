@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "732262383613",
+    "project_id": "fir-783f6",
+    "storage_bucket": "fir-783f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732262383613:android:aaa279cac552985cc32394",
+        "android_client_info": {
+          "package_name": "com.agribyte.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGQr4Gx_Eziidsu5JcCP2Y1ghwGgi5GCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
