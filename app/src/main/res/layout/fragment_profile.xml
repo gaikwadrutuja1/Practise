@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".profileFragment"
-    android:background="@color/appacent"
+    android:background="@color/black"
     >
 
     <TextView
@@ -20,5 +20,41 @@
         android:text="Profile"
         android:textColor="@color/app_blue"
         android:textSize="60dp" />
+    <TextView
+        android:id="@+id/fname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtname"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-black"
+        android:padding="10dp"
+        android:text="Name"
+        android:textColor="@color/app_blue"
+        android:textSize="40dp" />
+<!--    <TextView-->
+<!--        android:id="@+id/occ"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/fname"-->
+<!--        android:layout_marginTop="300dp"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:fontFamily="sans-serif-black"-->
+<!--        android:padding="10dp"-->
+<!--        android:text="occupation"-->
+<!--        android:textColor="@color/app_blue"-->
+<!--        android:textSize="40dp" />-->
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fname"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-black"
+        android:padding="10dp"
+        android:text="Email"
+        android:textColor="@color/app_blue"
+        android:textSize="40dp" />
 
 </FrameLayout>

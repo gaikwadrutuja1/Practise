@@ -56,7 +56,7 @@ public class BottombarActivity extends AppCompatActivity implements BottomNaviga
          loadfragment(new HomeFragment());
          return true;
       } else if (itemId == R.id.product) {
-         Toast.makeText(BottombarActivity.this, "Food item clicked", Toast.LENGTH_SHORT).show();
+         Toast.makeText(BottombarActivity.this, "Product clicked", Toast.LENGTH_SHORT).show();
          loadfragment(new productFragment());
 
          return true;
