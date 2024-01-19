@@ -87,7 +87,7 @@ public class AddItem extends BottombarActivity implements OnMapReadyCallback, Go
 
                     itemDetails.setProductDesc( strproductname );
                     itemDetails.setAddress ( straddress );
-                    itemDetails.setProductName ( strproductname );
+                    itemDetails.setProductName ( strproductdesc );
                     itemDetails.setQuantity (quan);
                     itemDetails.setLatitude ( finallatLng.latitude );
                     itemDetails.setLongitude ( finallatLng.longitude );
@@ -95,9 +95,9 @@ public class AddItem extends BottombarActivity implements OnMapReadyCallback, Go
                     DatabaseReference mdatabase= FirebaseDatabase.getInstance().getReference();
                     String uid=mdatabase.push ().getKey ();
                     mdatabase.child( "Locationdetails" ).child( uid ).setValue( itemDetails );
-//
-//                    Intent i = new Intent(AddItem.this, HomeFragment.class);
-//                    startActivity(i);
+
+                    Intent i = new Intent(AddItem.this, HomeFragment.class);
+                    startActivity(i);
 
                 }
                 else{

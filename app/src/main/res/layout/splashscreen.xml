@@ -55,7 +55,8 @@
         android:layout_alignParentTop="true"
         android:textColor="#C803F4"
         android:textStyle="bold"
-        android:text="Welcome to PastPluse"
+        android:text="Welcome to AgriByte"
+        
         android:textSize="32sp" />
 
     <TextView
