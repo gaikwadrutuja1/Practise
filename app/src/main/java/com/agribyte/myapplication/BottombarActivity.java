@@ -14,7 +14,7 @@ import androidx.fragment.app.FragmentManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-
+import fragments.HomeFragment;
 
 
 public class BottombarActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -34,11 +34,11 @@ public class BottombarActivity extends AppCompatActivity implements BottomNaviga
       fab.setOnClickListener ( new View.OnClickListener () {
          @Override
          public void onClick(View view) {
-//            Intent i = new Intent ( BottombarActivity.this, AddLocationActivity.class );
-//            startActivity ( i );
+           Intent i = new Intent ( BottombarActivity.this, AddItem.class );
+            startActivity ( i );
          }
       } );
-
+//loadfragment(new HomeFragment());
    }
 
    @Override
@@ -49,21 +49,28 @@ public class BottombarActivity extends AppCompatActivity implements BottomNaviga
 
    @Override
    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//      switch (item.getItemId ()) {
-//         case R.id.home:
-//            Toast.makeText ( BottombarActivity.this, "Home clicked", Toast.LENGTH_SHORT ).show ();
-//            return true;
-//
-//
-//         case R.id.ContactUs:
-//
-//            Toast.makeText ( BottombarActivity.this, "ContactUs clicked", Toast.LENGTH_SHORT ).show ();
-//            return true;
-//         case R.id.profile:
-//            return true;
-//         case R.id.aboutUs:
-//            return true;
-//      }
+      int itemId = item.getItemId();
+
+      if (itemId == R.id.home) {
+         Toast.makeText(BottombarActivity.this, "Home clicked", Toast.LENGTH_SHORT).show();
+         loadfragment(new HomeFragment());
+         return true;
+      } else if (itemId == R.id.product) {
+         Toast.makeText(BottombarActivity.this, "Food item clicked", Toast.LENGTH_SHORT).show();
+         loadfragment(new productFragment());
+
+         return true;
+      } else if (itemId == R.id.profile) {
+         Toast.makeText(BottombarActivity.this, "Profile Clicked", Toast.LENGTH_SHORT).show();
+         loadfragment(new profileFragment());
+
+         return true;
+      } else if (itemId == R.id.aboutUs) {
+         Toast.makeText(BottombarActivity.this, "About clicked", Toast.LENGTH_SHORT).show();
+         loadfragment(new aboutFragment());
+
+         return true;
+      }
 
       return false;
    }
