@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import com.agribyte.myapplication.ItemDetails;
 import com.agribyte.myapplication.R;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -80,7 +81,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
 //                startActivity(intent);
             }
         } );
-     //   getdata ( "Locationdetails" );
+        getdata ( "Locationdetails" );
     }
 
 
@@ -90,57 +91,57 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
 //        mMap.moveCamera( CameraUpdateFactory.newLatLng(location));
 //        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location, 12.0f));
 
-//    public void getdata(String url) {
-//        System.out.println ( "-------------" + url );
-//
-//        try {
-//
-//            ArrayList<Locationdetails> requestlist = new ArrayList<> ();
-//           // pb.setVisibility ( View.VISIBLE );
-//            //
-//            FirebaseDatabase mFirebaseInstance = FirebaseDatabase.getInstance ();
-//            DatabaseReference mFirebaseDatabase = mFirebaseInstance.getReference ( url );
-//            mFirebaseDatabase.keepSynced ( true );
-//            mFirebaseDatabase.addListenerForSingleValueEvent ( new ValueEventListener () {
-//                @Override
-//                public void onDataChange(DataSnapshot dataSnapshot) {
-//                   // System.out.println ( "is req----------------" + dataSnapshot.toString () );
-//
-//                    for (DataSnapshot locationobj : dataSnapshot.getChildren ()) {
-//                        System.out.println ( "is key key----------------" + locationobj.getKey () );
-//
-//                        HashMap<String, Object> yourData = (HashMap<String, Object>) locationobj.getValue ();
-//
-//                        Locationdetails sendSportReq = new Locationdetails ();
-//
-//                        double lati= (double) yourData.get ( "latitude");
-//                        double longitude= (double) yourData.get ( "longitude");
-//                        String lname= (String) yourData.get ( "loctionname");
-//
-//
-//                        LatLng location = new LatLng(lati, longitude); // Replace with the desired coordinates
-//                        Marker marker = mMap.addMarker(new MarkerOptions().position(location).title(lname));
-//
-//// Set a tag for the marker
-//                        String tagValue = locationobj.getKey (); // Replace with your desired tag value
-//                        marker.setTag(tagValue);
-//
-//                    }
-//
-//
-//
-//                }
-//
-//                @Override
-//                public void onCancelled(DatabaseError error) {
-//
-//
-//                }
-//            } );
-//        } catch (Exception e) {
-//            e.printStackTrace ();
-//        }
-//    }
+    public void getdata(String url) {
+        System.out.println ( "-------------" + url );
+
+        try {
+
+            ArrayList<ItemDetails> requestlist = new ArrayList<> ();
+           // pb.setVisibility ( View.VISIBLE );
+
+            FirebaseDatabase mFirebaseInstance = FirebaseDatabase.getInstance ();
+            DatabaseReference mFirebaseDatabase = mFirebaseInstance.getReference ( url );
+            mFirebaseDatabase.keepSynced ( true );
+            mFirebaseDatabase.addListenerForSingleValueEvent ( new ValueEventListener () {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    System.out.println ( "is req----------------" + dataSnapshot.toString () );
+
+                    for (DataSnapshot locationobj : dataSnapshot.getChildren ()) {
+                        System.out.println ( "is key key----------------" + locationobj.getKey () );
+
+                        HashMap<String, Object> yourData = (HashMap<String, Object>) locationobj.getValue ();
+
+                        ItemDetails sendSportReq = new ItemDetails ();
+
+                        double lati= (double) yourData.get ( "latitude");
+                        double longitude= (double) yourData.get ( "longitude");
+                        String lname= (String) yourData.get ( "productName");
+
+
+                        LatLng productName = new LatLng(lati, longitude); // Replace with the desired coordinates
+                        Marker marker = mMap.addMarker(new MarkerOptions().position(productName).title(lname));
+
+// "Set a tag for the marker"
+                        String tagValue = locationobj.getKey (); // Replace with your desired tag value
+                        marker.setTag(tagValue);
+
+                    }
+
+
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError error) {
+
+
+                }
+            } );
+        } catch (Exception e) {
+            e.printStackTrace ();
+        }
+    }
 }
 
 
